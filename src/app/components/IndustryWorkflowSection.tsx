@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils";
 const industries = [
     {
         id: "retail",
-        name: "Industry 01 — Retail",
+        name: "Industry 01 - Retail",
         problem: {
             title: "Retail Store Friction",
             items: [
@@ -33,7 +33,7 @@ const industries = [
     },
     {
         id: "banking",
-        name: "Industry 02 — Banking",
+        name: "Industry 02 - Banking",
         problem: {
             title: "Branch Bottlenecks",
             items: [
@@ -59,7 +59,7 @@ const industries = [
     },
     {
         id: "industrial",
-        name: "Industry 03 — Industrial / Energy",
+        name: "Industry 03 - Industrial / Energy",
         problem: {
             title: "Site Access Risks",
             items: [
@@ -102,7 +102,7 @@ export default function IndustryWorkflowSection() {
                         Industry Workflows.<br /> Automated End-to-End.
                     </h2>
                     <p className="text-xl text-white/60 font-light">
-                        AI systems mapped to real operational bottlenecks — <br className="hidden sm:block" />not generic features.
+                        AI systems mapped to real operational bottlenecks... <br className="hidden sm:block" />not generic features.
                     </p>
                 </div>
 
@@ -127,7 +127,7 @@ export default function IndustryWorkflowSection() {
                                         transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
                                     />
                                 )}
-                                <span className="relative z-10">{ind.name.split(" — ")[1]}</span>
+                                <span className="relative z-10">{ind.name.split(" - ")[1]}</span>
                             </button>
                         ))}
                     </div>

@@ -225,7 +225,7 @@ export default function HoloboxScrollCanvas() {
 
                         <div className="relative z-10 flex flex-col items-center">
                             <h1 className="mb-6 max-w-4xl text-4xl sm:text-6xl md:text-7xl font-medium tracking-tight text-white drop-shadow-xl">
-                                AI Experience Infrastructure<br className="hidden sm:block" /> <span className="text-white/80 drop-shadow-md">— In Physical Form.</span>
+                                AI Experience Infrastructure<br className="hidden sm:block" /> <span className="text-white/80 drop-shadow-md">In Physical Form.</span>
                             </h1>
                             <p className="mb-10 max-w-2xl text-lg sm:text-xl text-white/90 font-medium drop-shadow-lg">
                                 Holobox turns any location into a guided, measurable, AI-powered journey.
@@ -257,7 +257,7 @@ export default function HoloboxScrollCanvas() {
                                 Intelligence Beneath<br className="hidden md:block" /> the Surface.
                             </h2>
                             <p className="text-base sm:text-lg text-white/90 font-medium leading-relaxed mb-6 md:mb-8 drop-shadow-md">
-                                A premium object until it activates — then it reveals context, guidance, and intent.
+                                A premium object until it activates, then it reveals context, guidance, and intent.
                             </p>
                             <p className="text-xs font-semibold tracking-widest text-[#a86ef5] uppercase animate-pulse">
                                 ↓ Scroll to reveal the system

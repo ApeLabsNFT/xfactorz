@@ -13,11 +13,25 @@ export default function Home() {
       {/* SECTION 02: Industry Workflows (Three-column Vertical) */}
       <IndustryWorkflowSection />
 
-      {/* SECTION 03: Copilot Interface (Avatar + Chat) */}
-      <CopilotSection />
+      {/* SECTION 03 (Mobile Only): Visitor Automation comes first */}
+      <div className="block md:hidden w-full">
+        <VisitorAutomationSection />
+      </div>
 
-      {/* SECTION 04: Visitor Automation Tabbed System */}
-      <VisitorAutomationSection />
+      {/* SECTION 04 (Mobile Only): Copilot Interface comes second */}
+      <div className="block md:hidden w-full">
+        <CopilotSection />
+      </div>
+
+      {/* SECTION 03 (Desktop Only): Copilot Interface comes first */}
+      <div className="hidden md:block w-full">
+        <CopilotSection />
+      </div>
+
+      {/* SECTION 04 (Desktop Only): Visitor Automation comes second */}
+      <div className="hidden md:block w-full">
+        <VisitorAutomationSection />
+      </div>
 
       {/* SECTION 05: Enterprise Case Studies */}
       <section className="bg-white py-32 border-t border-black/5 text-[#1a1a2e]">

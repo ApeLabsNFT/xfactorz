@@ -220,80 +220,101 @@ export default function HoloboxScrollCanvas() {
                         style={{ opacity: heroOpacity, y: heroY }}
                         className="absolute inset-x-0 top-1/4 flex flex-col items-center text-center px-4"
                     >
-                        <h1 className="mb-6 max-w-4xl text-5xl font-medium tracking-tight text-white/90 sm:text-6xl md:text-7xl">
-                            AI Experience Infrastructure<br className="hidden sm:block" /> <span className="text-white/60">— In Physical Form.</span>
-                        </h1>
-                        <p className="mb-10 max-w-2xl text-lg text-white/60 sm:text-xl">
-                            Holobox turns any location into a guided, measurable, AI-powered journey.
-                        </p>
-                        <div className="flex flex-col sm:flex-row gap-4 pointer-events-auto">
-                            <Button size="lg" className="bg-white text-black hover:bg-white/90 rounded-full px-8 py-6 text-base tracking-tight transition-all hover:scale-105 active:scale-95 shadow-[0_0_40px_-10px_rgba(255,255,255,0.3)]">
-                                Request Deployment Strategy
-                            </Button>
-                            <Button size="lg" variant="outline" className="border-white/20 text-white hover:bg-white/10 rounded-full px-8 py-6 text-base tracking-tight backdrop-blur-sm transition-all">
-                                Watch Demo
-                            </Button>
+                        {/* Background glow to ensure text pops against white models */}
+                        <div className="absolute inset-0 bg-black/40 blur-3xl rounded-full scale-150 pointer-events-none" />
+
+                        <div className="relative z-10 flex flex-col items-center">
+                            <h1 className="mb-6 max-w-4xl text-4xl sm:text-6xl md:text-7xl font-medium tracking-tight text-white drop-shadow-xl">
+                                AI Experience Infrastructure<br className="hidden sm:block" /> <span className="text-white/80 drop-shadow-md">— In Physical Form.</span>
+                            </h1>
+                            <p className="mb-10 max-w-2xl text-lg sm:text-xl text-white/90 font-medium drop-shadow-lg">
+                                Holobox turns any location into a guided, measurable, AI-powered journey.
+                            </p>
+                            <div className="flex flex-col sm:flex-row gap-4 pointer-events-auto w-full sm:w-auto px-4 sm:px-0">
+                                <Button size="lg" className="w-full sm:w-auto bg-white text-black hover:bg-white/90 rounded-full px-8 py-6 text-base tracking-tight transition-all hover:scale-105 active:scale-95 shadow-[0_0_40px_-10px_rgba(255,255,255,0.3)]">
+                                    Request Deployment Strategy
+                                </Button>
+                                <Button size="lg" variant="outline" className="w-full sm:w-auto border-white/30 text-white hover:bg-white/10 bg-black/20 rounded-full px-8 py-6 text-base tracking-tight backdrop-blur-md transition-all shadow-xl">
+                                    Watch Demo
+                                </Button>
+                            </div>
                         </div>
                     </motion.div>
 
-                    {/* Section 2: Beneath the Surface (Left) */}
+                    {/* Section 2: Beneath the Surface (Left on Desktop, Center Bottom on Mobile) */}
                     <motion.div
                         style={{ opacity: leftOpacity, y: leftY }}
-                        className="absolute left-6 md:left-12 lg:left-24 top-1/3 flex max-w-lg flex-col items-start text-left"
+                        className="absolute inset-x-6 md:inset-x-auto md:left-12 lg:left-24 bottom-24 md:top-1/3 md:bottom-auto flex flex-col items-center md:items-start text-center md:text-left mx-auto max-w-lg bg-black/40 md:bg-transparent p-6 rounded-3xl md:p-0 md:rounded-none backdrop-blur-md md:backdrop-blur-none border border-white/10 md:border-none"
                     >
-                        <div className="mb-4 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 backdrop-blur-md">
-                            <span className="text-xs font-medium uppercase tracking-widest text-white/60">System Architecture</span>
+                        {/* Desktop backdrop glow */}
+                        <div className="hidden md:block absolute inset-0 bg-black/50 blur-3xl scale-150 pointer-events-none" />
+
+                        <div className="relative z-10 w-full flex flex-col items-center md:items-start">
+                            <div className="mb-4 rounded-full border border-white/20 bg-black/60 md:bg-white/5 px-4 py-1.5 backdrop-blur-md">
+                                <span className="text-xs font-medium uppercase tracking-widest text-white/90">System Architecture</span>
+                            </div>
+                            <h2 className="mb-4 md:mb-6 text-3xl font-medium tracking-tight text-white sm:text-5xl drop-shadow-xl">
+                                Intelligence Beneath<br className="hidden md:block" /> the Surface.
+                            </h2>
+                            <p className="text-base sm:text-lg text-white/90 font-medium leading-relaxed mb-6 md:mb-8 drop-shadow-md">
+                                A premium object until it activates — then it reveals context, guidance, and intent.
+                            </p>
+                            <p className="text-xs font-semibold tracking-widest text-[#a86ef5] uppercase animate-pulse">
+                                ↓ Scroll to reveal the system
+                            </p>
                         </div>
-                        <h2 className="mb-6 text-4xl font-medium tracking-tight text-white/90 sm:text-5xl">
-                            Intelligence Beneath<br /> the Surface.
-                        </h2>
-                        <p className="text-lg text-white/60 leading-relaxed mb-8">
-                            A premium object until it activates — then it reveals context, guidance, and intent.
-                        </p>
-                        <p className="text-sm font-medium tracking-widest text-[#8739f3] uppercase animate-pulse">
-                            ↓ Scroll to reveal the system
-                        </p>
                     </motion.div>
 
-                    {/* Section 3: Orchestrate (Right) */}
+                    {/* Section 3: Orchestrate (Right on Desktop, Center Bottom on Mobile) */}
                     <motion.div
                         style={{ opacity: rightOpacity, y: rightY }}
-                        className="absolute right-6 md:right-12 lg:right-24 top-1/3 flex max-w-lg flex-col items-start md:items-end text-left md:text-right"
+                        className="absolute inset-x-6 md:inset-x-auto md:right-12 lg:right-24 bottom-24 md:top-1/3 md:bottom-auto flex flex-col items-center md:items-end text-center md:text-right mx-auto max-w-lg bg-black/40 md:bg-transparent p-6 rounded-3xl md:p-0 md:rounded-none backdrop-blur-md md:backdrop-blur-none border border-white/10 md:border-none"
                     >
-                        <h2 className="mb-8 text-4xl font-medium tracking-tight text-white/90 sm:text-5xl">
-                            Orchestrate.<br /> Personalize. Measure.
-                        </h2>
-                        <ul className="flex flex-col gap-6 text-lg text-white/60 w-full">
-                            <li className="flex items-center gap-4 md:flex-row-reverse border-b border-white/10 pb-4">
-                                <div className="h-2 w-2 rounded-full bg-[#8739f3]/80 shadow-[0_0_10px_#8739f3]" />
-                                <span>Conversational journeys by role</span>
-                            </li>
-                            <li className="flex items-center gap-4 md:flex-row-reverse border-b border-white/10 pb-4">
-                                <div className="h-2 w-2 rounded-full bg-[#8739f3]/80 shadow-[0_0_10px_#8739f3]" />
-                                <span>Automation workflows across touchpoints</span>
-                            </li>
-                            <li className="flex items-center gap-4 md:flex-row-reverse pb-4">
-                                <div className="h-2 w-2 rounded-full bg-[#8739f3]/80 shadow-[0_0_10px_#8739f3]" />
-                                <span>Analytics across locations</span>
-                            </li>
-                        </ul>
+                        {/* Desktop backdrop glow */}
+                        <div className="hidden md:block absolute inset-0 bg-black/50 blur-3xl scale-150 pointer-events-none" />
+
+                        <div className="relative z-10 w-full flex flex-col items-center md:items-end">
+                            <h2 className="mb-6 md:mb-8 text-3xl font-medium tracking-tight text-white sm:text-5xl drop-shadow-xl">
+                                Orchestrate.<br className="hidden md:block" /> Personalize. Measure.
+                            </h2>
+                            <ul className="flex flex-col gap-4 md:gap-6 text-base sm:text-lg text-white/90 font-medium w-full max-w-[300px] md:max-w-none mx-auto md:mx-0">
+                                <li className="flex items-center gap-3 md:gap-4 flex-row md:flex-row-reverse border-b border-white/10 pb-3 md:pb-4 text-left md:text-right">
+                                    <div className="h-2 w-2 shrink-0 rounded-full bg-[#8739f3]/80 shadow-[0_0_10px_#8739f3]" />
+                                    <span className="drop-shadow-md">Conversational journeys by role</span>
+                                </li>
+                                <li className="flex items-center gap-3 md:gap-4 flex-row md:flex-row-reverse border-b border-white/10 pb-3 md:pb-4 text-left md:text-right">
+                                    <div className="h-2 w-2 shrink-0 rounded-full bg-[#8739f3]/80 shadow-[0_0_10px_#8739f3]" />
+                                    <span className="drop-shadow-md">Automation workflows across touchpoints</span>
+                                </li>
+                                <li className="flex items-center gap-3 md:gap-4 flex-row md:flex-row-reverse pb-3 md:pb-4 text-left md:text-right">
+                                    <div className="h-2 w-2 shrink-0 rounded-full bg-[#8739f3]/80 shadow-[0_0_10px_#8739f3]" />
+                                    <span className="drop-shadow-md">Analytics across locations</span>
+                                </li>
+                            </ul>
+                        </div>
                     </motion.div>
 
                     {/* Section 4: Final (Centered Bottom) */}
                     <motion.div
                         style={{ opacity: finalOpacity, y: finalY }}
-                        className="absolute inset-x-0 bottom-1/4 flex flex-col items-center text-center px-4"
+                        className="absolute inset-x-0 bottom-16 sm:bottom-1/4 flex flex-col items-center text-center px-4"
                     >
-                        <h2 className="mb-6 max-w-3xl text-4xl font-medium tracking-tight text-white/90 sm:text-5xl md:text-6xl">
-                            Deploy once.<br /> Scale across every site.
-                        </h2>
-                        <p className="mb-10 max-w-2xl text-lg text-white/60 sm:text-xl">
-                            Centralized control, consistent experience, measurable outcomes.
-                        </p>
-                        <div className="pointer-events-auto">
-                            <Button size="lg" className="bg-[#8739f3] text-white hover:bg-[#722ada] rounded-full px-8 py-6 text-base tracking-tight transition-all shadow-[0_0_30px_-5px_rgba(135,57,243,0.5)] hover:shadow-[0_0_40px_-5px_rgba(135,57,243,0.7)]">
-                                Book a Live Walkthrough
-                            </Button>
+                        {/* Background glow */}
+                        <div className="absolute inset-0 bg-black/50 blur-3xl rounded-full scale-150 pointer-events-none" />
+
+                        <div className="relative z-10 flex flex-col items-center w-full">
+                            <h2 className="mb-4 sm:mb-6 max-w-3xl text-3xl sm:text-5xl md:text-6xl font-medium tracking-tight text-white drop-shadow-xl">
+                                Deploy once.<br /> Scale across every site.
+                            </h2>
+                            <p className="mb-8 sm:mb-10 max-w-2xl text-base sm:text-xl text-white/90 font-medium drop-shadow-md">
+                                Centralized control, consistent experience, measurable outcomes.
+                            </p>
+                            <div className="pointer-events-auto w-full sm:w-auto px-4 sm:px-0">
+                                <Button size="lg" className="w-full sm:w-auto bg-[#8739f3] text-white hover:bg-[#722ada] rounded-full px-8 py-6 text-base tracking-tight transition-all shadow-[0_0_30px_-5px_rgba(135,57,243,0.5)] hover:shadow-[0_0_40px_-5px_rgba(135,57,243,0.7)] group relative overflow-hidden">
+                                    <div className="absolute inset-0 bg-white/20 translate-y-full transition-transform group-hover:translate-y-0" />
+                                    <span className="relative z-10">Book a Live Walkthrough</span>
+                                </Button>
+                            </div>
                         </div>
                     </motion.div>
 

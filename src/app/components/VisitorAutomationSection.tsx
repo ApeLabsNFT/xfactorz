@@ -149,14 +149,14 @@ export default function VisitorAutomationSection() {
                 </div>
 
                 {/* Pill Navigation */}
-                <div className="flex justify-center mb-24 relative z-20">
-                    <div className="inline-flex flex-wrap justify-center items-center gap-2 rounded-full border border-white/10 bg-white/5 p-1.5 shadow-xl backdrop-blur-md">
+                <div className="flex justify-start md:justify-center mb-16 md:mb-24 relative z-20 overflow-x-auto pb-4 sm:pb-0 hide-scrollbar -mx-6 px-6 sm:mx-0 sm:px-0">
+                    <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 p-1.5 shadow-xl backdrop-blur-md min-w-max">
                         {tabs.map((tab) => (
                             <button
                                 key={tab.id}
                                 onClick={() => setActiveTabId(tab.id)}
                                 className={cn(
-                                    "px-6 py-2.5 rounded-full text-[0.8rem] font-bold uppercase tracking-wider transition-all duration-300 relative",
+                                    "px-4 sm:px-6 py-2.5 rounded-full text-[0.7rem] sm:text-[0.8rem] font-bold uppercase tracking-wider transition-all duration-300 relative whitespace-nowrap",
                                     activeTabId === tab.id
                                         ? "text-black"
                                         : "text-white/40 hover:text-white/80 hover:bg-white/5"
@@ -249,14 +249,17 @@ export default function VisitorAutomationSection() {
                 </div>
 
                 {/* Bottom Impact Bar */}
-                <div className="w-full rounded-[1.5rem] bg-white/[0.02] border border-white/10 p-8 sm:p-10 shadow-2xl shadow-black/50 backdrop-blur-xl mt-8">
-                    <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
-                        <div className="flex flex-col whitespace-nowrap lg:border-r border-white/10 lg:pr-12">
-                            <h4 className="text-xl font-bold text-white/90 leading-none mb-1">Business</h4>
-                            <h4 className="text-xl font-bold text-white/90 leading-none">Impact</h4>
+                <div className="w-full rounded-[1.5rem] md:rounded-full bg-white/[0.02] border border-white/10 p-6 md:p-8 shadow-2xl shadow-black/50 backdrop-blur-xl mt-8 md:mt-12 overflow-hidden relative">
+                    {/* Subtle shine effect on the card */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/[0.03] to-transparent -translate-x-full animate-[shimmer_3s_infinite]" />
+
+                    <div className="flex flex-col md:flex-row items-start md:items-center gap-6 md:gap-8 lg:gap-12 relative z-10">
+                        <div className="flex flex-row md:flex-col whitespace-nowrap md:border-r border-white/10 md:pr-8 lg:pr-12 gap-2 md:gap-0 border-b md:border-b-0 pb-4 md:pb-0 w-full md:w-auto">
+                            <h4 className="text-xl md:text-2xl font-bold text-white/90 leading-none mb-1">Business</h4>
+                            <h4 className="text-xl md:text-2xl font-bold text-white/90 leading-none">Impact</h4>
                         </div>
 
-                        <div className="flex-1 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 w-full">
+                        <div className="flex-1 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-8 w-full">
                             <AnimatePresence mode="popLayout">
                                 {activeTab.impacts.map((impact, idx) => (
                                     <motion.div

@@ -107,8 +107,8 @@ export default function IndustryWorkflowSection() {
                 </div>
 
                 {/* Tabs */}
-                <div className="flex justify-center mb-20 relative z-20">
-                    <div className="inline-flex flex-wrap justify-center items-center gap-2 rounded-full border border-white/10 bg-white/5 p-1.5 backdrop-blur-md shadow-2xl shadow-black/50">
+                <div className="flex justify-start md:justify-center mb-16 md:mb-20 relative z-20 overflow-x-auto pb-4 sm:pb-0 hide-scrollbar -mx-6 px-6 sm:mx-0 sm:px-0">
+                    <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 p-1.5 backdrop-blur-md shadow-2xl shadow-black/50 min-w-max">
                         {industries.map((ind) => (
                             <button
                                 key={ind.id}
@@ -145,12 +145,12 @@ export default function IndustryWorkflowSection() {
                             className="grid grid-cols-1 lg:grid-cols-[1fr_2fr_1fr] gap-12 lg:gap-16 pt-4"
                         >
                             {/* LEFT: Problem */}
-                            <div className="flex flex-col items-start lg:items-end lg:text-right pt-6">
-                                <div className="mb-6 inline-flex items-center rounded-full border border-[#8739f3]/20 bg-[#8739f3]/10 px-4 py-1.5 text-[0.65rem] font-bold uppercase tracking-[0.2em] text-[#8739f3]">
+                            <div className="flex flex-col items-start lg:items-end lg:text-right pt-2 lg:pt-6">
+                                <div className="mb-4 lg:mb-6 inline-flex items-center rounded-full border border-[#8739f3]/20 bg-[#8739f3]/10 px-4 py-1.5 text-[0.65rem] font-bold uppercase tracking-[0.2em] text-[#8739f3]">
                                     {activeIndustry.name}
                                 </div>
-                                <h3 className="mb-8 text-2xl font-medium tracking-tight text-white/90">{activeIndustry.problem.title}</h3>
-                                <ul className="flex flex-col gap-5 w-full">
+                                <h3 className="mb-6 lg:mb-8 text-xl lg:text-2xl font-medium tracking-tight text-white/90">{activeIndustry.problem.title}</h3>
+                                <ul className="flex flex-col gap-4 lg:gap-5 w-full">
                                     {activeIndustry.problem.items.map((item, j) => (
                                         <li key={j} className="flex items-start lg:justify-end gap-3 text-[0.95rem] tracking-wide text-white/50">
                                             <span className="lg:order-2 mt-0.5 flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-red-500/10 text-[0.6rem] text-red-500">×</span>
@@ -194,16 +194,16 @@ export default function IndustryWorkflowSection() {
                             </div>
 
                             {/* RIGHT: Outcome */}
-                            <div className="flex flex-col pt-6">
-                                <h3 className="mb-8 text-2xl font-medium tracking-tight text-white/90">Automated Outcome</h3>
-                                <ul className="flex flex-col gap-6">
+                            <div className="flex flex-col pt-2 lg:pt-6">
+                                <h3 className="mb-6 lg:mb-8 text-xl lg:text-2xl font-medium tracking-tight text-white/90">Automated Outcome</h3>
+                                <ul className="flex flex-col gap-4 lg:gap-6">
                                     {activeIndustry.outcome.map((item, j) => (
                                         <motion.li
                                             initial={{ opacity: 0, x: 20 }}
                                             animate={{ opacity: 1, x: 0 }}
                                             transition={{ duration: 0.3, delay: j * 0.1 }}
                                             key={j}
-                                            className="flex flex-col gap-1.5"
+                                            className="flex flex-col gap-1.5 lg:gap-1.5"
                                         >
                                             <div className="flex items-center gap-3">
                                                 <div className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full border border-emerald-500/30 bg-emerald-500/10 text-emerald-400">

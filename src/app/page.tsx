@@ -22,11 +22,11 @@ export default function Home() {
       {/* SECTION 05: Enterprise Case Studies */}
       <section className="bg-white py-32 border-t border-black/5 text-[#1a1a2e]">
         <div className="mx-auto max-w-7xl px-6">
-          <div className="mb-20 flex flex-col items-start gap-6">
+          <div className="mb-12 md:mb-20 flex flex-col items-start gap-4 md:gap-6">
             <h2 className="text-sm font-bold uppercase tracking-widest text-[#8739f3]">
               Proven at Scale
             </h2>
-            <h3 className="text-4xl font-medium tracking-tight sm:text-5xl max-w-2xl">
+            <h3 className="text-3xl md:text-4xl font-medium tracking-tight sm:text-5xl max-w-2xl">
               Infrastructure trusted by global operations.
             </h3>
           </div>
@@ -57,7 +57,7 @@ export default function Home() {
                   {story.company}
                 </div>
                 <div className="mb-6 flex flex-col gap-1">
-                  <span className="text-5xl font-light tracking-tighter text-[#8739f3]">
+                  <span className="text-4xl md:text-5xl font-light tracking-tighter text-[#8739f3]">
                     {story.metric}
                   </span>
                   <span className="text-sm font-medium text-black/60">
@@ -81,15 +81,15 @@ export default function Home() {
         <div className="relative z-10 mx-auto max-w-7xl px-6">
           <div className="grid gap-16 lg:grid-cols-[1fr_400px] lg:gap-24 items-start">
 
-            <div className="max-w-2xl pt-10">
-              <h2 className="mb-8 text-5xl font-medium tracking-tight text-white/90 sm:text-6xl lg:text-7xl leading-tight">
+            <div className="max-w-2xl pt-0 lg:pt-10">
+              <h2 className="mb-6 md:mb-8 text-4xl sm:text-5xl font-medium tracking-tight text-white/90 lg:text-7xl leading-tight">
                 Architect your<br /> physical AI layer.
               </h2>
-              <p className="text-xl text-white/50 mb-12 max-w-lg font-light">
+              <p className="text-lg md:text-xl text-white/50 mb-10 md:mb-12 max-w-lg font-light">
                 Speak with our engineering team to map out deployment requirements for your facilities.
               </p>
 
-              <div className="flex flex-wrap items-center gap-x-8 gap-y-4 text-sm text-white/40 font-medium uppercase tracking-wider">
+              <div className="flex flex-wrap items-center gap-x-6 md:gap-x-8 gap-y-4 text-xs md:text-sm text-white/40 font-medium uppercase tracking-wider">
                 <span className="flex items-center gap-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#8739f3]" />
                   Enterprise Security
